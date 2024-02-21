@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convite para a Formatura de Técnico em Informática</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita barras de rolagem */
+  }
+
+   /* Imagem de fundo */
+   img.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca a imagem atrás de outros elementos */
+  }
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Ajusta a largura máxima para 80% da largura da tela */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    color: #333333;
+  }
+  p {
+    color: #666666;
+    line-height: 1.6;
+  }
+  .btn {
+    display: inline-block;
+    background-color: #00a86b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 48%; /* Largura dos botões ajustável para ocupar quase metade do container */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+  }
+  .btn:hover {
+    background-color: #0056b3;
+  }
+
+  /* Mídia query para dispositivos com largura máxima de 768 pixels (tablets e smartphones) */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px; /* Reduz o padding para dispositivos móveis */
+    }
+    .btn {
+      display: block; /* Altera o botão para exibição de bloco para ocupar a largura total */
+      width: 100%; /* Define a largura do botão como 100% */
+    }
+  }
+</style>
+</head>
+<body>
+
+<img src="imgs/img.png" class="background" alt="Imagem de fundo">
+
+<div class="container">
+  <h1>Formatura da Adelini</h1>
+  <p>É com muita alegria que convido você para a minha formatura do ensino médio integrado ao curso técnico em informática. Será um momento especial, e gostaria que celebrasse essa conquista comigo!</p>
+  <p>Data: 23 de fevereiro de 2024</p>
+  <p>Local: Centro de Cultura de Sapiranga</p>
+  <p>Horário: 19:00</p>
+  <a href="#" class="btn" id="confirmar">Confirmar Presença</a>
+  <a href="#" class="btn" id="recusar">Recusar Convite</a>
+</div>
+
+<script>
+  // Adicionando funcionalidade aos botões
+  document.getElementById("confirmar").addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("Presença confirmada! Te aguardo ansiosamente. Lembre-se da pulseira no dia.");
+  });
+
+  document.getElementById("recusar").addEventListener("click", function(event) {
+    event.preventDefault();
+    alert("adelini se encontra extremamente triste!");
+  });
+</script>
+
+</body>
+</html>
